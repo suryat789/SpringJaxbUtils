@@ -3,13 +3,11 @@ package com.spring.oxm.utils;
 import java.io.IOException;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.oxm.XmlMappingException;
 import org.springframework.oxm.castor.CastorMarshaller;
 
-@Configuration
 public abstract class AbstractCommonJaxbConfig {
 
 	private Marshaller marshaller;
@@ -17,7 +15,6 @@ public abstract class AbstractCommonJaxbConfig {
 
 	private CastorMarshaller castorMarshaller;
 
-	@Bean
 	public Marshaller getMarshaller() {
 		return marshaller;
 	}
