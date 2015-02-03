@@ -14,7 +14,7 @@ public class CommonJaxbUtils extends AbstractCommonJaxbConfig {
 	public <T> String getXMLFromObject(T object) throws XmlMappingException, IOException {
 		StringWriter writer = new StringWriter();
 		getMarshaller().marshal(object, new StreamResult(writer));
-		return writer == null ? null : writer.toString();
+		return writer == null ? null : writer.toString().trim();
 	}
 
 	@SuppressWarnings("unchecked")
